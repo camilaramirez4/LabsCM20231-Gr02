@@ -70,8 +70,6 @@
         android:id="@+id/txtFecha"
         android:layout_width="157dp"
         android:layout_height="31dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="25dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="casual"
         android:foregroundTint="@color/black"
@@ -81,9 +79,9 @@
         android:textSize="14sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/rbtnHombre" />
+        tools:layout_editor_absoluteY="125dp" />
 
     <EditText
         android:id="@+id/editNombre"
