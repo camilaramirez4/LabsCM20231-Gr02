@@ -4,67 +4,168 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#00AC2525"
     tools:context=".PersonalDataActivity">
 
-    <EditText
-        android:id="@+id/editTextNombres"
-        android:layout_width="109dp"
-        android:layout_height="60dp"
-        android:text="Nombres"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/txtInfo"
+        android:layout_width="291dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:autoSizeTextType="uniform"
+        android:autoText="false"
+        android:fontFamily="casual"
+        android:foregroundTint="@color/black"
+        android:text="Información personal"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textSize="24sp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
-
-    <EditText
-        android:id="@+id/editTextApellidos"
-        android:layout_width="109dp"
-        android:layout_height="60dp"
-        android:text="Apellidos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.165"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.314" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewInfo"
-        android:layout_width="227dp"
-        android:layout_height="37dp"
+        android:id="@+id/txtSexo"
+        android:layout_width="66dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
         android:autoSizeTextType="uniform"
-        android:text="Información personal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.228"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056" />
+        android:fontFamily="casual"
+        android:foregroundTint="@color/black"
+        android:text="Sexo"
+        android:textAlignment="inherit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textSize="14sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@+id/rbtnHombre"
+        app:layout_constraintTop_toBottomOf="@+id/editApellidos" />
 
     <RadioButton
-        android:id="@+id/radioButtonSexo"
-        android:layout_width="88dp"
-        android:layout_height="61dp"
-        android:text="Sexo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/rbtnHombre"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="casual"
+        android:text="Hombre"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446" />
+        app:layout_constraintStart_toEndOf="@+id/imgSexo"
+        app:layout_constraintTop_toBottomOf="@+id/editApellidos" />
+
+    <RadioButton
+        android:id="@+id/rbtnMujer"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="casual"
+        android:text="Mujer"
+        app:layout_constraintStart_toEndOf="@+id/rbtnHombre"
+        app:layout_constraintTop_toBottomOf="@+id/editApellidos" />
+
+    <TextView
+        android:id="@+id/txtFecha"
+        android:layout_width="157dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="25dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="casual"
+        android:foregroundTint="@color/black"
+        android:text="Fecha de Nacimiento"
+        android:textAlignment="inherit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textSize="14sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgFecha"
+        app:layout_constraintTop_toBottomOf="@+id/rbtnHombre" />
+
+    <EditText
+        android:id="@+id/editNombre"
+        android:layout_width="273dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="casual"
+        android:text="Nombres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgNombre"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editApellidos"
+        android:layout_width="273dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="casual"
+        android:text="Apellidos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgApellido"
+        app:layout_constraintTop_toBottomOf="@+id/editNombre" />
 
     <Spinner
-        android:id="@+id/spinnerGradoEsco"
-        android:layout_width="371dp"
-        android:layout_height="90dp"
+        android:id="@+id/spnGrado"
+        android:layout_width="273dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
         android:text="Grado de escolaridad"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/imgGrado"
+        app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
+
+    <ImageView
+        android:id="@+id/imgNombre"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.742" />
+        app:srcCompat="@drawable/nombre" />
+
+    <ImageView
+        android:id="@+id/imgApellido"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgSexo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgNombre"
+        app:srcCompat="@drawable/apellido" />
+
+    <ImageView
+        android:id="@+id/imgSexo"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgFecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgApellido"
+        app:srcCompat="@drawable/sexo" />
+
+    <ImageView
+        android:id="@+id/imgFecha"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgSexo"
+        app:srcCompat="@drawable/fecha" />
+
+    <ImageView
+        android:id="@+id/imgGrado"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgFecha"
+        app:srcCompat="@drawable/grado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
