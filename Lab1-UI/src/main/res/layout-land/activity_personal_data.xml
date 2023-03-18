@@ -31,11 +31,11 @@
         android:id="@+id/editNombre"
         android:layout_width="227dp"
         android:layout_height="52dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="15dp"
         android:fontFamily="casual"
         android:text="Nombres"
         app:layout_constraintStart_toEndOf="@+id/imgNombre"
-        tools:layout_editor_absoluteY="77dp" />
+        tools:layout_editor_absoluteY="72dp" />
 
     <ImageView
         android:id="@+id/imgSexo"
@@ -50,7 +50,7 @@
         android:id="@+id/txtFecha"
         android:layout_width="157dp"
         android:layout_height="31dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="15dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="casual"
         android:foregroundTint="@color/black"
@@ -72,11 +72,11 @@
         tools:layout_editor_absoluteY="73dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/cambiarButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="164dp"
-        android:text="Button"
+        android:text="CAMBIAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/txtFecha"
@@ -147,7 +147,7 @@
         android:id="@+id/imgNombre"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="72dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -157,7 +157,7 @@
         android:id="@+id/imgGrado2"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/grado"
         tools:layout_editor_absoluteY="281dp" />
@@ -176,14 +176,15 @@
         tools:layout_editor_absoluteY="73dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/siguienteButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="24dp"
-        android:text="Button"
+        android:text="siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

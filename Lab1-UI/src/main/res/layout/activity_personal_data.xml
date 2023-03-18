@@ -11,8 +11,8 @@
         android:id="@+id/txtInfo"
         android:layout_width="291dp"
         android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="8dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="casual"
@@ -23,16 +23,16 @@
         android:textSize="24sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtSexo"
         android:layout_width="66dp"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="15dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="casual"
@@ -76,7 +76,7 @@
         android:layout_width="157dp"
         android:layout_height="31dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="148dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="casual"
@@ -87,7 +87,7 @@
         android:textSize="14sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgFecha"
         app:layout_constraintTop_toBottomOf="@+id/rbtnHombre" />
 
@@ -122,10 +122,11 @@
         android:layout_width="273dp"
         android:layout_height="55dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
         android:text="Grado de escolaridad"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgGrado2"
         app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
 
@@ -134,7 +135,7 @@
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="76dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/nombre" />

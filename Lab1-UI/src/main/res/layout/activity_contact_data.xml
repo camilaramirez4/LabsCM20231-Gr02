@@ -6,69 +6,130 @@
     android:layout_height="match_parent"
     tools:context=".ContactDataActivity">
 
+    <ImageView
+        android:id="@+id/imgTelefono"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/telefono" />
+
+    <ImageView
+        android:id="@+id/imgPais"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgEmail"
+        app:srcCompat="@drawable/pais" />
+
+    <ImageView
+        android:id="@+id/imgEmail"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgTelefono"
+        app:srcCompat="@drawable/email" />
+
+    <ImageView
+        android:id="@+id/imgDireccion"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCiudad"
+        app:srcCompat="@drawable/direccion" />
+
+    <ImageView
+        android:id="@+id/imgCiudad"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPais"
+        app:srcCompat="@drawable/ciudad" />
+
     <EditText
         android:id="@+id/editTextTelefono"
         android:layout_width="273dp"
         android:layout_height="55dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="30dp"
         android:fontFamily="casual"
         android:text="Telefono"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgTelefono"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
 
     <TextView
         android:id="@+id/autocompleteCiudad"
         android:layout_width="65dp"
         android:layout_height="35dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="236dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="casual"
         android:text="Ciudad"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgCiudad"
         app:layout_constraintTop_toBottomOf="@+id/autocompletePais" />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="273dp"
         android:layout_height="55dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="30dp"
         android:fontFamily="casual"
         android:text="E-mail"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgEmail"
         app:layout_constraintTop_toBottomOf="@+id/editTextTelefono" />
 
     <TextView
         android:id="@+id/autocompletePais"
         android:layout_width="73dp"
         android:layout_height="35dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="228dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="casual"
         android:text="País"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgPais"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
     <EditText
         android:id="@+id/editTextDireccion"
         android:layout_width="273dp"
         android:layout_height="55dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
         android:fontFamily="casual"
         android:text="Dirección"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toEndOf="@+id/imgDireccion"
         app:layout_constraintTop_toBottomOf="@+id/autocompleteCiudad" />
 
     <TextView
         android:id="@+id/textViewTitulo"
         android:layout_width="354dp"
         android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="18dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="casual"
         android:text="Información de contacto"
