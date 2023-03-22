@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Labs20231-Gr02</string>
+    <string name="cambiar">Cambiar</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="nombres">Nombres</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="sexo">Sexo</string>
+    <string name="informaci_n_personal">Información personal</string>
 </resources>
