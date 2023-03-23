@@ -7,6 +7,17 @@
     android:backgroundTint="#00AC2525"
     tools:context=".PersonalDataActivity">
 
+    <Button
+        android:id="@+id/btnFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="muestraCalendario"
+        android:text="@string/cambiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbtnMujer" />
+
     <TextView
         android:id="@+id/txtInfo"
         android:layout_width="0dp"
@@ -73,7 +84,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
-        android:text="@string/nombres"
+        android:hint="@string/nombres"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgNombre"
@@ -87,7 +98,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="casual"
-        android:text="@string/apellidos"
+        android:hint="@string/apellidos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgApellido"
@@ -100,7 +111,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Grado de escolaridad"
+        android:text="@string/grado_de_escolaridad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgGrado2"
@@ -175,25 +186,18 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:fontFamily="casual"
         android:inputType="date"
+        android:hint="@string/fecha_de_nacimiento"
         app:layout_constraintStart_toEndOf="@+id/imgFecha"
         app:layout_constraintTop_toBottomOf="@+id/txtSexo" />
 
-    <Button
-        android:id="@+id/btnFecha"
-        android:layout_width="wrap_content"
-        android:layout_height="55dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:onClick="muestraCalendario"
-        android:text="@string/cambiar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbtnMujer" />
-
     <DatePicker
         android:id="@+id/dpFecha"
-        android:layout_width="350dp"
-        android:layout_height="400dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="24dp"
         android:visibility="gone"
         tools:ignore="MissingConstraints" />
 

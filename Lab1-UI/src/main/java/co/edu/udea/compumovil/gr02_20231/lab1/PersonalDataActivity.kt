@@ -22,10 +22,11 @@ class PersonalDataActivity : AppCompatActivity() {
         txtFecha = findViewById(R.id.txtFecha)
         btnFecha = findViewById(R.id.btnFecha)
         dpFecha = findViewById(R.id.dpFecha)
-        txtFecha?.setText(getFechaDtePicker())
+        txtFecha?.setText("Fecha de Nacimiento")
         dpFecha?.setOnDateChangedListener { dpFecha, anio, mes, dia ->
             txtFecha?.setText(getFechaDtePicker())
             dpFecha?.visibility = View.GONE
+            btnFecha?.visibility = View.VISIBLE
         }
 
         //Spinner
@@ -44,6 +45,7 @@ class PersonalDataActivity : AppCompatActivity() {
 
     fun muestraCalendario(view: View) {
         dpFecha?.visibility = View.VISIBLE
+        btnFecha?.visibility = View.INVISIBLE
     }
 }
 
