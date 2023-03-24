@@ -10,4 +10,11 @@
     <string name="informaci_n_personal">Información personal</string>
     <string name="fecha_de_nacimiento">Fecha de Nacimiento</string>
     <string name="grado_de_escolaridad">Grado de escolaridad</string>
+    <string name="telefono">Telefono</string>
+    <string name="pais">País</string>
+    <string name="email">E-mail</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="direccion">Dirección</string>
+    <string name="anterior">Anterior</string>
+    <string name="informaci_n_de_contacto">Información de contacto</string>
 </resources>

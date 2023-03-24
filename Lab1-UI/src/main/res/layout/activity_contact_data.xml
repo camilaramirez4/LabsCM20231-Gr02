@@ -65,6 +65,7 @@
         android:layout_marginEnd="30dp"
         android:fontFamily="casual"
         android:text="Telefono"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgTelefono"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
