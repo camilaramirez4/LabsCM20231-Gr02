@@ -11,12 +11,11 @@
         android:id="@+id/btnFecha"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="20dp"
         android:onClick="muestraCalendario"
         android:text="@string/cambiar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbtnMujer" />
+        tools:layout_editor_absoluteY="269dp" />
 
     <TextView
         android:id="@+id/txtInfo"
@@ -37,11 +36,10 @@
 
     <TextView
         android:id="@+id/txtSexo"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
+        android:layout_width="71dp"
+        android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="casual"
         android:foregroundTint="@color/black"
@@ -50,31 +48,42 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
         android:textSize="14sp"
         app:autoSizeTextType="uniform"
-        app:layout_constraintEnd_toStartOf="@+id/rbtnHombre"
         app:layout_constraintStart_toEndOf="@+id/imgSexo"
         app:layout_constraintTop_toBottomOf="@+id/editApellidos" />
 
-    <RadioButton
-        android:id="@+id/rbtnMujer"
-        android:layout_width="100dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="casual"
-        android:text="@string/mujer"
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="229dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editApellidos" />
+        app:layout_constraintStart_toEndOf="@+id/txtSexo"
+        app:layout_constraintTop_toBottomOf="@+id/editApellidos">
 
-    <RadioButton
-        android:id="@+id/rbtnHombre"
-        android:layout_width="100dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="casual"
-        android:text="@string/hombre"
-        app:layout_constraintEnd_toStartOf="@+id/rbtnMujer"
-        app:layout_constraintTop_toBottomOf="@+id/editApellidos" />
+        <RadioButton
+            android:id="@+id/rbtnMujer"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="casual"
+            android:text="@string/mujer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editApellidos" />
+
+        <RadioButton
+            android:id="@+id/rbtnHombre"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="casual"
+            android:text="@string/hombre"
+            app:layout_constraintEnd_toStartOf="@+id/rbtnMujer"
+            app:layout_constraintTop_toBottomOf="@+id/editApellidos" />
+
+    </RadioGroup>
 
     <EditText
         android:id="@+id/editNombre"
