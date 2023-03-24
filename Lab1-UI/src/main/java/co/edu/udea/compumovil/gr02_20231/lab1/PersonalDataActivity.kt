@@ -1,11 +1,14 @@
 package co.edu.udea.compumovil.gr02_20231.lab1
 
+import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
+import android.util.Log
+
 
 class PersonalDataActivity : AppCompatActivity() {
     var txtFecha: EditText? = null
@@ -34,6 +37,11 @@ class PersonalDataActivity : AppCompatActivity() {
         val listaEscolaridad= arrayOf("Seleccione un grado","Primaria","Secundaria","Universitaria","Otro")
         var adaptador:ArrayAdapter<String> = ArrayAdapter(this,android.R.layout.simple_spinner_item,listaEscolaridad)
         spnGrado?.adapter=adaptador
+
+        //Mostrar datos en consola
+        val editText = findViewById<View>(R.id.editNombre) as EditText
+        val textoIngresado = editText.text.toString()
+        Log.d("MiEtiqueta", "El texto ingresado es: $textoIngresado")
     }
 
     fun getFechaDtePicker(): String {
@@ -47,5 +55,11 @@ class PersonalDataActivity : AppCompatActivity() {
         dpFecha?.visibility = View.VISIBLE
         btnFecha?.visibility = View.INVISIBLE
     }
+
+    fun sigAct(view: View) {
+        val intent = Intent(this, ContactDataActivity::class.java)
+        startActivity(intent)
+    }
+
 }
 
