@@ -42,6 +42,25 @@ class PersonalDataActivity : AppCompatActivity() {
         val adaptador:ArrayAdapter<String> = ArrayAdapter(this,android.R.layout.simple_spinner_item,listaEscolaridad)
         spnGrado?.adapter=adaptador
 
+        val myButton = findViewById<Button>(R.id.siguienteButton)
+        myButton.setOnClickListener {
+            val editNombre = findViewById<EditText>(R.id.editNombre)
+            val editApellidos = findViewById<EditText>(R.id.editApellidos)
+            val txtFecha = findViewById<EditText>(R.id.txtFecha)
+
+            if (editNombre.text.toString().isEmpty()) {
+                Toast.makeText(this, "El nombre es un campo obligatorio y está vacío.", Toast.LENGTH_SHORT).show()
+            } else if (editApellidos.text.toString().isEmpty()){
+                Toast.makeText(this, "Los apellidos son un campo obligatorio y están vacíos.", Toast.LENGTH_SHORT).show()
+            } else if (txtFecha.text.toString().isEmpty()) {
+                Toast.makeText(this, "La fecha de nacimiento es un campo obligatorio y está vacía.", Toast.LENGTH_SHORT).show()
+            } else {
+                imprimir()
+                val intent = Intent(this, ContactDataActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
     }
 
     fun getFechaDtePicker(): String {
@@ -56,11 +75,6 @@ class PersonalDataActivity : AppCompatActivity() {
         btnFecha?.visibility = View.INVISIBLE
     }
 
-    fun sigAct(view: View) {
-        imprimir()
-        val intent = Intent(this, ContactDataActivity::class.java)
-        startActivity(intent)
-    }
 
     fun imprimir() {
         // Obtener los objetos
@@ -86,6 +100,7 @@ class PersonalDataActivity : AppCompatActivity() {
         Log.d("IP", "Nació el $fecha")
         Log.d("IP", grado)
     }
+
 
 }
 

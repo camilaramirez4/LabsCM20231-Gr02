@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Labs20231-Gr02</string>
+    <string name="cambiar">Changer</string>
+    <string name="siguiente">Suivant</string>
+    <string name="apellidos">Noms de famille</string>
+    <string name="nombres">Nom</string>
+    <string name="hombre">Homme</string>
+    <string name="mujer">Femme</string>
+    <string name="sexo">Sexe</string>
+    <string name="informaci_n_personal">Information personelle</string>
+    <string name="fecha_de_nacimiento">Date de naissance</string>
+    <string name="grado_de_escolaridad">Classe</string>
+    <string name="telefono">Téléphone</string>
+    <string name="pais">Pays</string>
+    <string name="email">E-mail</string>
+    <string name="ciudad">Ville</string>
+    <string name="direccion">Adresse</string>
+    <string name="anterior">Ancien</string>
+    <string name="informaci_n_de_contacto">Information de contact</string>
+</resources>

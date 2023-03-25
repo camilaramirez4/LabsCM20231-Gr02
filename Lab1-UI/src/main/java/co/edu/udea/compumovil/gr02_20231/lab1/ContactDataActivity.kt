@@ -1,5 +1,6 @@
 package co.edu.udea.compumovil.gr02_20231.lab1
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.view.View
 import android.widget.*
 
 class ContactDataActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_data)
@@ -29,12 +31,27 @@ class ContactDataActivity : AppCompatActivity() {
         val adapterPais = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, datosPais)
         val autoCompleteTextViewPais = findViewById<AutoCompleteTextView>(R.id.autocompletePais)
         autoCompleteTextViewPais.setAdapter(adapterPais)
-    }
 
-    fun antAct(view: View) {
-        imprimir()
-        val intent = Intent(this, PersonalDataActivity::class.java)
-        startActivity(intent)
+        val myButton = findViewById<Button>(R.id.anteriorButton)
+        myButton.setOnClickListener {
+            val editTextTelefono = findViewById<EditText>(R.id.editTextTelefono)
+            val editTextEmail = findViewById<EditText>(R.id.editTextEmail)
+            val autocompletePais = findViewById<EditText>(R.id.autocompletePais)
+
+            if (editTextTelefono.text.toString().isEmpty()) {
+                Toast.makeText(this, "El teléfono es un campo obligatorio y está vacío.", Toast.LENGTH_SHORT).show()
+            } else if (editTextEmail.text.toString().isEmpty()){
+                Toast.makeText(this, "El e-mail es un campo obligatorio y está vacío.", Toast.LENGTH_SHORT).show()
+            } else if (autocompletePais.text.toString().isEmpty()) {
+                Toast.makeText(this, "El país es un campo obligatorio y está vacío.", Toast.LENGTH_SHORT).show()
+            } else {
+                imprimir()
+                val intent = Intent(this, ContactDataActivity::class.java)
+                startActivity(intent)
+            }
+
+        }
+
     }
 
     fun imprimir() {
