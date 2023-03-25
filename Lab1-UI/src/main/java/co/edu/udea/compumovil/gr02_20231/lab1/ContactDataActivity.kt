@@ -46,7 +46,7 @@ class ContactDataActivity : AppCompatActivity() {
                 Toast.makeText(this, "El país es un campo obligatorio y está vacío.", Toast.LENGTH_SHORT).show()
             } else {
                 imprimir()
-                val intent = Intent(this, ContactDataActivity::class.java)
+                val intent = Intent(this, PersonalDataActivity::class.java)
                 startActivity(intent)
             }
 
