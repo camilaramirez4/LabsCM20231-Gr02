@@ -129,7 +129,7 @@
 
     <TextView
         android:id="@+id/textViewTitulo"
-        android:layout_width="361dp"
+        android:layout_width="0dp"
         android:layout_height="49dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="casual"

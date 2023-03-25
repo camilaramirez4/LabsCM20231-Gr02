@@ -3,9 +3,9 @@ package co.edu.udea.compumovil.gr02_20231.lab1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
+import android.widget.*
 
 class ContactDataActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +32,33 @@ class ContactDataActivity : AppCompatActivity() {
     }
 
     fun antAct(view: View) {
+        imprimir()
         val intent = Intent(this, PersonalDataActivity::class.java)
         startActivity(intent)
+    }
+
+    fun imprimir() {
+        // Obtener los objetos
+        val editTextTelefono = findViewById<EditText>(R.id.editTextTelefono)
+        val editTextEmail = findViewById<EditText>(R.id.editTextEmail)
+        val autocompletePais = findViewById<AutoCompleteTextView>(R.id.autocompletePais)
+        val autocompleteCiudad = findViewById<AutoCompleteTextView>(R.id.autocompleteCiudad)
+        val editTextDireccion = findViewById<EditText>(R.id.editTextDireccion)
+
+        // Guardar textos de los objetos
+        val telefono = editTextTelefono.text.toString()
+        val email = editTextEmail.text.toString()
+        val pais = autocompletePais.text.toString()
+        val ciudad = autocompleteCiudad.text.toString()
+        val direccion = editTextDireccion.text.toString()
+
+        // Imprimir en consola
+        Log.d("IC", "Información de contacto:")
+        Log.d("IC", "Teléfono: $telefono")
+        Log.d("IC", "Dirección: $direccion")
+        Log.d("IC", "Email: $email")
+        Log.d("IC", "Pais: $pais")
+        Log.d("IC", "Ciudad: $ciudad")
+
     }
 }

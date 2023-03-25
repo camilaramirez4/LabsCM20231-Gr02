@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/txtFecha"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:ignore="UsingOnClickInXml" />
 
     <TextView
         android:id="@+id/txtInfo"
@@ -135,6 +136,7 @@
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/nombres"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtInfo"
         app:srcCompat="@drawable/nombre" />
@@ -145,6 +147,7 @@
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/sexo"
         app:layout_constraintBottom_toTopOf="@+id/imgFecha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgApellido"
@@ -156,6 +159,7 @@
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/fecha_de_nacimiento"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgSexo"
         app:srcCompat="@drawable/fecha" />
@@ -166,6 +170,7 @@
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/grado_de_escolaridad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgFecha"
         app:srcCompat="@drawable/grado" />
@@ -176,6 +181,7 @@
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/apellidos"
         app:layout_constraintBottom_toTopOf="@+id/imgSexo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgNombre"
@@ -190,7 +196,8 @@
         android:onClick="sigAct"
         android:text="@string/siguiente"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnGrado" />
+        app:layout_constraintTop_toBottomOf="@+id/spnGrado"
+        tools:ignore="UsingOnClickInXml" />
 
     <EditText
         android:id="@+id/txtFecha"
